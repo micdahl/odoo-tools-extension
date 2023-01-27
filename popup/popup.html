@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Send Barcode</title>
+        <style>
+            button {
+                background-color: #336dab;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 16px;
+            }
+            button.validate {
+                background-color: green;
+            }
+            button.cancel {
+                background-color: red;
+            }
+            p {
+                color: gray;
+            }
+            .button-box {
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+            }
+            .button-box button {
+                width: 50%;
+            }
+            .flex-column {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .flex-row {
+                display: flex;
+                gap: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Send Barcode</h1>
+        <p>Press Button to send Command via Barcode to Odoo or enter own Barcode and press <em>Send</em>.</p>
+        <div class="flex-column">
+            <button type="button" id="validate" class="validate">Validate</button>
+            <button type="button" id="cancel" class="cancel">Cancel</button>
+            <button type="button" id="put-in-pack">Put in Pack</button>
+            <div class="button-box">
+                <button type="button" id="previous">Previous</button>
+                <button type="button" id="next">Next</button>
+            </div>
+            <div class="flex-row">
+                <label for="barcode" hidden="hidden">Barcode</label>
+                <input type="text" clas="barcode" name="barcode" id="barcode" placeholder="barcode">
+                <button type="button" id="sendbarcode">Send</button>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
+
