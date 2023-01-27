@@ -1,9 +1,9 @@
 {
     "name": "Odoo Browser development tools",
-    "version": "0.0.1.1",
+    "version": "0.1.0.0",
     "manifest_version": 3,
-    "description": "The tool may or may not get more features.Currently it allows sending Barcodes to an open Odoo page. To do so, just click on the Extension Icon while being signed in to Odoo and chose the Barcode to send.",
-    "short_description": "A tool which aims to be helpful for Odoo developers.",
+    "description": "A tool which aims to be helpful for Odoo developers. The tool may or may not get more features. Currently it allows sending Barcodes to an open Odoo page. To do so, click on the Extension Icon while being signed in to Odoo and chose the Barcode to send.",
+    "homepage_url": "https://github.com/micdahl/odoo-tools-extension",
     "icons": {
         "16":  "./icons/odoo-tools16x16.png",
         "32":  "./icons/odoo-tools32x32.png",
