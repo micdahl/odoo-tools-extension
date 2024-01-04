@@ -16,15 +16,19 @@
     "permissions": [
         "storage", "tabs"
     ],
+    "content_security_policy": { 
+        "extension-pages": "script-src 'self' 'sha256-ZXQRX+OKCEbQDkxiwXRVRaVXOUFR8CbbStzqHUZf7O0='; object-src 'self'; worker-src 'self'"
+    },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["popup/proxy.js"],
-            "world": "MAIN"
-        },{
-            "matches": ["<all_urls>"],
             "js": ["popup/contentScript.js"]
         }
-    ]
+    ],
+    "web_accessible_resources": [{
+        "resources": ["popup/proxy.js"],
+        "matches": ["<all_urls>"]
+    }]
 }
+
 
